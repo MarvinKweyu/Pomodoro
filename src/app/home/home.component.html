@@ -1,0 +1,15 @@
+<div class="flex flex-col justify-center items-center min-h-screen">
+    <h1 class="text-3xl font-bold text-center mb-24">
+        The Pomodoro you need
+    </h1>
+    <div class="border-solid border-2 border-slate-50 shadow-md justify-self-center w-1/2 h-1/2 py-10">
+        <div class="text-center font-bold text-7xl ">
+            {{initial_time}}
+        </div>
+        <div class="play flex justify-center mt-3">
+            <button class="rounded-full bg-red-600 p-2 mx-2" (click)="startCounter(initial_time)">Start</button>
+            <button class="rounded-full bg-red-600 p-2 mx-2">Stop</button>
+        </div>
+    </div>
+
+</div>
