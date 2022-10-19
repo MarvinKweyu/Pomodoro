@@ -10,7 +10,7 @@ ng serve
 ```
 Access the project via: http://localhost:4200/
 
-## Develop in electron
+### Develop in electron
 ```bash
 npm run electron
 ```
