@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   timer = 50; //1800 set the time at 30 minutes
 
-  disableStart: boolean = false;
+  runCounter: boolean = false;
   playSound: boolean = false;
 
   countDown: any;
@@ -46,11 +46,16 @@ export class HomeComponent implements OnInit {
   }
 
 
-  startCounter() {
+  toggleCounter() {
     // will disable after click
-    this.disableStart = true;
-    let callDuration = this.elementRef.nativeElement.querySelector('#time');
-    this.startTimer(callDuration);
+    this.runCounter = !this.runCounter;
+    if(this.runCounter){
+      
+       let callDuration = this.elementRef.nativeElement.querySelector('#time');
+      this.startTimer(callDuration);
+    }else{
+     this.stopCounter();
+  }
   }
   //  this button is disabled at the start of the program
   stopCounter(){
