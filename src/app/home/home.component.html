@@ -6,13 +6,28 @@
     class="border-solid border-2 border-slate-50 shadow-md justify-self-center w-1/2 h-1/2 py-10"
   >
     <div class="text-center font-bold text-7xl">
-      <h5><span id="time" class="text-primary">30:00</span></h5>
+      <h5>
+        <span
+          id="time"
+          class="text-primary"
+          [ngClass]="playSound ? 'animate-pulse' : ''"
+          >30:00</span
+        >
+      </h5>
     </div>
     <div class="play flex justify-center mt-3">
-      <button class="rounded-full bg-red-600 p-2 mx-2" (click)="startCounter()">
+      <button
+        class="rounded-full bg-red-600 p-2 mx-2"
+        [ngClass]="disableStart ? 'disabled' : ''"
+        (click)="startCounter()"
+      >
         Start
       </button>
-      <button class="rounded-full bg-red-600 p-2 mx-2" (click)="stopCounter()">
+      <button
+        class="rounded-full bg-red-600 p-2 mx-2"
+        [ngClass]="disableStart ? '' : 'disabled'"
+        (click)="stopCounter()"
+      >
         Stop
       </button>
     </div>

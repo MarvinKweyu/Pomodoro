@@ -8,7 +8,10 @@ import { interval } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  timer = 1800; // set the time at 30 minutes
+  timer = 50; //1800 set the time at 30 minutes
+
+  disableStart: boolean = false;
+  playSound: boolean = false;
 
   countDown: any;
   constructor(private elementRef: ElementRef) {}
@@ -32,7 +35,11 @@ export class HomeComponent implements OnInit {
       --this.timer;
       if (this.timer < 0) {
         // perform notification of completion
-        console.log('timer is ended');
+        this.playBell();
+        
+        // reset timer value to 00
+        this.timer = 0
+        this.countDown.unsubscribe()
       }
     });
     
@@ -41,13 +48,23 @@ export class HomeComponent implements OnInit {
 
   startCounter() {
     // will disable after click
+    this.disableStart = true;
     let callDuration = this.elementRef.nativeElement.querySelector('#time');
     this.startTimer(callDuration);
   }
   //  this button is disabled at the start of the program
   stopCounter(){
     this.countDown.unsubscribe();
-    console.log("stop coutner")
     // enable start button counter
+  }
+
+  playBell(){
+    this.playSound = true;
+    
+     let audio = new Audio();
+      audio.src = "../../assets/mixkit-modern-classic-door-bell-sound-113.wav";
+      audio.load();
+      audio.play();
+
   }
 }
