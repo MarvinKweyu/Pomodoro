@@ -1,16 +1,19 @@
-# Pomodoro
+# [Pomodoro](https://pomodoro.marvinkweyu.net)
 
-The pomodoro application you've been looking for
+The pomodoro application you've been looking for.
 
 ## Development server
 
 ### The Web
+
 ```bash
 ng serve
 ```
+
 Access the project via: http://localhost:4200/
 
 ### Develop in electron
+
 ```bash
 npm run electron
 ```
