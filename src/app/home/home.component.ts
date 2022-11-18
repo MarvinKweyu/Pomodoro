@@ -51,16 +51,35 @@ export class HomeComponent implements OnInit {
     this.runCounter = !this.runCounter;
     if(this.runCounter){
       
-       let callDuration = this.elementRef.nativeElement.querySelector('#time');
+      let callDuration = this.elementRef.nativeElement.querySelector('#time');
       this.startTimer(callDuration);
     }else{
      this.stopCounter();
   }
   }
+
+  takeBreak() {
+    /*
+    Change the counter to 5 minutes, 
+    then sound the alarm and change the button to active 
+    */
+    this.timer = 300;
+     // enable start button counter
+    let callDuration = this.elementRef.nativeElement.querySelector('#time');
+    this.runCounter = true;
+    this.playSound = false;
+    this.startTimer(callDuration);
+  }
   //  this button is disabled at the start of the program
   stopCounter(){
     this.countDown.unsubscribe();
-    // enable start button counter
+  }
+  reset() {
+    this.runCounter = false;
+    this.timer = 1500;
+    let callDuration = this.elementRef.nativeElement.querySelector('#time');
+    this.startTimer(callDuration);
+  
   }
 
   playBell(){
