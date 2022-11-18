@@ -8,7 +8,7 @@ import { interval } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  timer = 50; //1800 set the time at 30 minutes
+  timer = 1500; //1800 seconds set the time at 30 minutes
 
   runCounter: boolean = false;
   playSound: boolean = false;
