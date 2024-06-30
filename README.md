@@ -6,21 +6,38 @@ The pomodoro application you've been looking for.
 ![Electron](https://img.shields.io/badge/native-electron-blue)
 
 
-
-
 - [Pomodoro](#pomodoro)
+  - [Installing](#installing)
+    - [Run the latest via your web browser](#run-the-latest-via-your-web-browser)
+    - [Install Pomodoro on your local machine:](#install-pomodoro-on-your-local-machine)
   - [Development server](#development-server)
-    - [The Web](#the-web)
+    - [Running on the Web](#running-on-the-web)
     - [Develop in electron](#develop-in-electron)
-  - [Code scaffolding](#code-scaffolding)
   - [Build](#build)
   - [Running unit tests](#running-unit-tests)
   - [Running end-to-end tests](#running-end-to-end-tests)
   - [ToDo](#todo)
 
+
+## Installing
+
+### Run the latest via your web browser
+You can install Pomodoro locally or use the web application at: [pomodoro.marvinkweyu.net](https://pomodoro.marvinkweyu.net/)
+
+
+### Install Pomodoro on your local machine:
+
+Documentation(work in progress)
+
 ## Development server
 
-### The Web
+Clone the repository, install the dependencies and spin up your local development server
+
+
+```bash
+npm i
+```
+### Running on the Web
 
 ```bash
 ng serve
@@ -34,9 +51,7 @@ Access the project via: http://localhost:4200/
 npm run electron
 ```
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
