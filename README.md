@@ -2,6 +2,21 @@
 
 The pomodoro application you've been looking for.
 
+![Angular](https://img.shields.io/badge/angular-v16-red)
+![Electron](https://img.shields.io/badge/native-electron-blue)
+
+
+
+
+- [Pomodoro](#pomodoro)
+  - [Development server](#development-server)
+    - [The Web](#the-web)
+    - [Develop in electron](#develop-in-electron)
+  - [Code scaffolding](#code-scaffolding)
+  - [Build](#build)
+  - [Running unit tests](#running-unit-tests)
+  - [Running end-to-end tests](#running-end-to-end-tests)
+
 ## Development server
 
 ### The Web
