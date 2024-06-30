@@ -16,6 +16,7 @@ The pomodoro application you've been looking for.
   - [Build](#build)
   - [Running unit tests](#running-unit-tests)
   - [Running end-to-end tests](#running-end-to-end-tests)
+  - [ToDo](#todo)
 
 ## Development server
 
@@ -48,3 +49,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## ToDo
+ - [ ] Customize time as a user
